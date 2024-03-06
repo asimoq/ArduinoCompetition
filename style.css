@@ -1,6 +1,12 @@
+:root {
+  --blue: rgb(57,161,164);
+  --yellow: rgb(244,192,57);
+  --red: rgb(218,80,77);
+}
+
 body{
-  background-color: rgb(77 140 171);
-  color: rgb(87 150 174);
+  background-color: var(--blue);
+  color: var(--blue);
   flex-direction: column;
   font-family: "Caladea", serif;
   padding: 0;
@@ -24,25 +30,27 @@ body{
 }
 .Title-text{
   position: absolute;
-  top: 10%;
-  z-index: 100;
+  top: 5%;
+  z-index: 10;
   
   left:0; right: 0;
   font-family: "Bebas Neue", sans-serif;
   font-size:12.5vw;
   letter-spacing: 0.2em;
-  color: white;
+  color: var(--blue);
   text-shadow: 0px 0px 50px rgba(0,0,0,0.2);
   transition: text-shadow 0.15s;
   pointer-events: none;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.655);
   
 }
 
 .about{
-  background-color: rgb(207, 136, 39);
+  background-color: var(--yellow);
   color: white;
-  padding: 40px;
+  padding: 50px;
+  position: relative;
+  z-index: 50;
 }
 
 .about-title{
@@ -53,7 +61,7 @@ body{
 .where{
   display: flex;
   flex-direction: row;
-  background-color: rgb(77 140 171);
+  background-color: var(--blue);
   height: 430px;
   color: white;
 }
@@ -74,7 +82,7 @@ body{
   padding: 15px 30px; 
   margin: 0;
   margin-top: 10px;
-  background-color: rgba(207, 136, 39, 1);
+  background-color: var(--yellow);
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.05);
   color: white;
   text-decoration: none;
@@ -87,7 +95,7 @@ body{
 }
 
 .tickets:hover {
-  background-color: rgb(255, 149, 0);
+  background-color: var(--yellow);
 }
 
 .tickets:active {
@@ -154,6 +162,8 @@ body{
   .map{
     flex: 2;
   }
+
+  
 }
 
 @media screen and (min-width:1900px) {
@@ -169,6 +179,10 @@ body{
     grid-auto-rows: 350px;
    
     
+  }
+  .about{
+    z-index: -5;
+    padding-right: 40%;
   }
 }
 
