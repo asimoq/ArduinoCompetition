@@ -11,20 +11,18 @@ body{
 .poster-container{
   position: relative;
   text-align: center;
-  background-image:url(images/Background.jpg);
+  background-image:url(images/Background_Blured.jpg);
   background-size: cover;
   background-position:top;
   background-repeat: no-repeat;
   height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  
 
 }
 .background-image{
   max-width: 100%;
 }
-.Budapesten-text{
+.Title-text{
   position: absolute;
   top: 10%;
   z-index: 100;
