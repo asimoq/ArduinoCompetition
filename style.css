@@ -64,7 +64,7 @@ body{
   background-color: var(--blue);
   height: 430px;
   color: white;
-  padding: 45px;
+  
 }
 .where-text{
   font-size: 110%;
@@ -184,6 +184,9 @@ body{
   .about{
     z-index: -5;
     padding-right: 40%;
+  }
+  .where{
+    padding: 45px;
   }
 }
 
