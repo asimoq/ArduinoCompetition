@@ -22,6 +22,7 @@ body{
   background-position:top;
   background-repeat: no-repeat;
   height: 100vh;
+  overflow: hidden;
 }
 
 .background-image{
@@ -29,8 +30,8 @@ body{
 }
 .Title-text{
   position: absolute;
-  top: 30%;
-  font-size:16.5vw;
+  top: 36%;
+  font-size:17.5vw;
   z-index: 0;
   
   left:0; right: 0;
@@ -149,8 +150,11 @@ body{
 }
 
 .render{
-  scale: 130%;
-  transform: translateX(4vw);
+  scale: 135%;
+  overflow:visible;
+  left: 0%;
+  transform: translateY(35px) translateX(10px)
+  
 }
 
 .galleryimage:hover {
