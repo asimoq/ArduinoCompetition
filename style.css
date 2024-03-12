@@ -14,6 +14,69 @@ body{
   
 }
 
+.hamburger-icon {
+  display: block;
+  overflow: hidden;
+  position: fixed;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  z-index: 1010;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s ease;
+  transition: text-shadow 0.3s ease;
+  text-shadow: 0px 0px 50px rgba(0,0,0,0.2);
+}
+
+.hamburger-icon:active{
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0px 0px 50px rgba(0, 0, 0, 0.32);
+  
+}
+
+.navbar {
+  display: block;
+  background: rgba(163, 163, 163, 0.438);
+  backdrop-filter: saturate(180%) blur(10px);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-height: 0%;
+  transition: max-height 0.3s ease;
+  z-index: 1001;
+}
+
+.navbar.expanded {
+  max-height: 400px;
+}
+
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 19px;
+}
+
+.navbar a:hover {
+  background-color: var(--yellow);
+  backdrop-filter: saturate(180%) blur(10px);
+  color: white;
+}
+
+.navbar a.active {
+  background-color: var(--yellow);
+  color: white;
+}
+
 .poster-container{
   position: relative;
   text-align: center;
@@ -184,7 +247,24 @@ body{
   }
 }
 
-@media screen and (min-width:600px) {
+@media screen and (max-width:700px) {
+  .navbar a{
+    padding-right: 50%;
+    color: var(--blue);
+    
+  }
+  .hamburger-icon{
+    font-size: 50px;
+  }
+  .Budapesten-text{
+    top: 20%
+  }
+  .navbar{
+  background: rgba(255, 255, 255, 0.838);
+  }
+}
+
+@media screen and (min-width:700px) {
   .gallery{
     
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -194,11 +274,29 @@ body{
   }
   .about{
     z-index: 50;
-    padding-right: 40%;
+    padding-left: 200px;
+    padding-right: 200px;
   }
   .where{
     padding: 45px;
+    padding-left: 200px;
+    padding-right: 200px;
   }
+
+  .gallery{
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+
+  .hamburger-icon{
+    display: none;
+  }
+
+  .navbar{
+    max-height: 100px;
+  }
+
+
   .Title-text{
     top: 5%;
     font-size:12.5vw;

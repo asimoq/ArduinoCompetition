@@ -8,3 +8,22 @@ function toggleExpand(element) {
   }
 }
 
+function toggleNavbar() {
+  var navbar = document.querySelector('.navbar');
+  navbar.classList.toggle('expanded');
+}
+
+function scrollToElement(elementId) {
+  const element = document.getElementById(elementId);
+
+  if (element) {
+    const offsetTop = element.getBoundingClientRect().top + window.scrollY;
+
+    window.scroll({
+      top: offsetTop,
+      behavior: 'smooth'
+    });
+  }
+  event.preventDefault();
+}
+
