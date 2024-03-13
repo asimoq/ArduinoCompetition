@@ -27,3 +27,29 @@ function scrollToElement(elementId) {
   event.preventDefault();
 }
 
+var options = {
+  root: null,
+  rootMargin: '60%',
+  threshold: 0.5 // Adjust the threshold as needed
+};
+
+// Callback function to handle intersection changes
+function handleIntersection(entries, observer) {
+  entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+          var imageUrl = entry.target.getAttribute('data-src');
+          entry.target.style.backgroundImage = 'url(' + imageUrl + ')';
+          observer.unobserve(entry.target); // Stop observing once loaded
+      }
+  });
+}
+
+// Create Intersection Observer
+var observer = new IntersectionObserver(handleIntersection, options);
+
+// Observe each element with the 'galleryimage' class
+var galleryImages = document.querySelectorAll('.galleryimage');
+galleryImages.forEach(function(image) {
+  observer.observe(image);
+});
+
