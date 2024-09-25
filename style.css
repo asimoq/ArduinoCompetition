@@ -137,11 +137,12 @@ body{
 }
 
 .video-section{
-  height: 700px;
+  height:35vw;
 }
 
 .video-background {
-  background: #000;
+  background: var(--blue);
+  background-color: var(--blue);
   position:relative;
   top: 0; right: 0; bottom: 0; left: 0;
   z-index: -99;
@@ -319,7 +320,7 @@ body{
 @media screen and (min-width:1000px) {
   .gallery{
     
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-auto-rows: 350px;
    
     
