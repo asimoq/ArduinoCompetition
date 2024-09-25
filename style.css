@@ -136,52 +136,46 @@ body{
   padding: 0;
 }
 
+.video-section{
+  height: 700px;
+}
+
 .video-background {
-  position: absolute;
+  background: #000;
+  position:relative;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+  height: 150%;
+}
+.video-foreground,
+.video-background iframe {
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  z-index: -1;
+  pointer-events: none;
 }
-
-/* Container for the code section */
-.code-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100vh;
+#vidtop-content {
+	color: #fff;
   position: relative;
-  color: white;
+  z-index: 1;
 }
-
-/* The left side with blurred video background */
-.blurred-side {
-  width: 50%;
-  backdrop-filter: blur(8px); /* Creates the blur effect */
-  padding: 20px;
+.vid-info { position: absolute; top: 0; right: 0; width: 33%; background: rgba(0,0,0,0.3); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
+.vid-info h1 { font-size: 2rem; font-weight: 700; margin-top: 0; line-height: 1.2; }
+.vid-info a { display: block; color: #fff; text-decoration: none; background: rgba(0,0,0,0.5); transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center; }
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { height: 300%; top: -100%; }
 }
-
-/* The right side with clear video */
-.clear-side {
-  width: 50%;
-  padding: 20px;
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { width: 300%; left: -100%; }
 }
-
-/* Styling the header */
-.code-header {
-  font-size: 24px;
-  color: red;
-  font-weight: bold;
-  margin-bottom: 10px;
+@media all and (max-width: 600px) {
+.vid-info { width: 50%; padding: .5rem; }
+.vid-info h1 { margin-bottom: .2rem; }
 }
-
-/* Ensuring the text stands out over the blurred video */
-.text-on-blur {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  border-radius: 8px;
+@media all and (max-width: 500px) {
+.vid-info .acronym { display: none; }
 }
 
 .icon{
