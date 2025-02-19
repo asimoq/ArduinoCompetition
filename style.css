@@ -102,7 +102,6 @@ body{
   
   letter-spacing: 0.1em;
   color: var(--blue);
-  text-shadow: 0px 0px 10px rgba(0,0,0,0.1);
   transition: text-shadow 0.15s;
   pointer-events: none;
   background-color: rgba(255, 255, 255, 0.856);
