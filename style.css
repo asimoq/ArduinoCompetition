@@ -214,10 +214,15 @@ body{
   transform: scale(0.85);
 }
 
+.github-container {
+  display: flex;
+  justify-content: right;
+}
+
 .github {
-  display:inline-block;
-  float: right;
-  padding: 10px 20px; 
+  display: inline-block;
+  clear: right;
+  padding: 10px 20px;
   margin-left: auto;
   margin-right: 0;
   margin-top: 20px;
@@ -228,12 +233,12 @@ body{
   color: rgb(0, 0, 0);
   text-decoration: none;
   font-family: "Space Grotesk", sans-serif;
-  font-size: xx-large;
+  font-size: 3vw;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.2s, transform 0.2s;
-  
+
 }
 
 .github:hover {
