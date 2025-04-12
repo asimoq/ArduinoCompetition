@@ -68,7 +68,7 @@ body {
   /* Igazítás */
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   /* Eredeti árnyék */
-  
+
 }
 
 /* Hamburger gomb fókusz állapotának eltávolítása (kék keret) */
@@ -317,43 +317,7 @@ body {
   }
 }
 
-.github-container {
-  display: flex;
-  justify-content: right;
-}
 
-.github {
-  display: inline-block;
-  clear: right;
-  padding: 10px 20px;
-  margin-left: auto;
-  margin-right: 0;
-  margin-top: 20px;
-  margin-bottom: 30px;
-  z-index: 1000;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.05);
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 3vw;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.2s, transform 0.2s;
-
-}
-
-.github:hover {
-  border-radius: 5px;
-  background-color: var(--blue);
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.05);
-  transform: scale(0.98);
-}
-
-.github:active {
-  transform: scale(0.85);
-}
 
 .galeria-text {
   font-family: "Bebas Neue", sans-serif;
@@ -409,6 +373,281 @@ body {
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
   transform: translateY(-3px) scale(1.01);
 }
+
+/* ============================================= */
+/* == Documentation Section Styles == */
+/* ============================================= */
+
+#documentation {
+  padding: 50px 20px;
+  background-color: var(--blue); /* Light background for the section */
+  color: #333; /* Default text color */
+  margin: 40px 0; /* Vertical margin */
+  border-top: 1px solid #eee; /* Separator line */
+  border-bottom: 1px solid #eee; /* Separator line */
+  font-family: "Space Grotesk", sans-serif; /* Consistent font */
+  line-height: 1.6; /* Readability */
+}
+
+/* Main heading of the documentation section */
+#documentation .doc-content>h1 {
+  color: var(--blue); /* Use theme color */
+  text-align: left; /* Center the main heading only */
+  margin-top: 0; /* Remove default top margin if it's the first element */
+  margin-bottom: 1.5em;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.05em;
+  font-size: 2.8rem; /* Prominent size */
+}
+
+/* Accordion Item container */
+.accordion-item {
+  border-bottom: 1px solid #eee; /* Separator between items */
+  margin-bottom: 10px; /* Space below each item */
+  background-color: #ffffff; /* Ensure white background */
+  border-radius: 5px;
+}
+
+.accordion-item:last-child {
+  border-bottom: none; /* No border for the last item */
+}
+
+/* Accordion Header (the clickable button) */
+.accordion-header {
+  background-color: #f8f9fa; /* Light gray background */
+  color: var(--blue); /* Theme color for text */
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none; /* Remove default button border */
+  text-align: left; /* Align header text to the left */
+  outline: none; /* Remove focus outline */
+  font-size: 1.4rem;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.05em;
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: space-between; /* Text left, icon right */
+  align-items: left;
+  border-radius: 5px; /* Rounded corners */
+}
+
+.accordion-header:hover {
+  background-color: #e9ecef; /* Slightly darker on hover */
+}
+
+/* Icon (+/-) in the header */
+.accordion-header .icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: transform 0.3s ease; /* Animate rotation */
+  flex-shrink: 0; /* Prevent icon from shrinking */
+  margin-left: 15px; /* Space between text and icon */
+}
+
+/* Accordion Content (collapsible area) */
+.accordion-content {
+  padding: 0 18px; /* Horizontal padding, vertical handled by max-height */
+  background-color: white; /* Explicit white background */
+  max-height: 0; /* Initially collapsed */
+  overflow: hidden; /* Hide content when collapsed */
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Smooth transition */
+  text-align: left; /* Ensure all direct text content is left-aligned */
+  border-radius: 5px;
+}
+
+/* General styling for elements within the accordion content */
+.accordion-content p,
+.accordion-content ul,
+.accordion-content ol,
+.accordion-content table,
+.accordion-content h3,
+.accordion-content h4 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-align: left; /* Explicitly set left alignment */
+}
+.accordion-content>:first-child {
+  margin-top: 0; /* Remove top margin from the first element inside content */
+}
+.accordion-content>:last-child {
+  margin-bottom: 0; /* Remove bottom margin from the last element inside content */
+}
+
+/* == Specific element styles within accordion content == */
+
+/* Subheadings (H3, H4 etc.) */
+#documentation .accordion-content h3 {
+  color: var(--red); /* Use theme color */
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.05em;
+  font-size: 1.5rem;
+}
+#documentation .accordion-content h4 {
+  color: var(--blue); /* Slightly different color if needed */
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.05em;
+  font-size: 1.2rem;
+}
+
+
+/* Lists (UL, OL, LI) */
+#documentation .accordion-content ul,
+#documentation .accordion-content ol {
+  display: block !important; /* Override potential global styles (like inline-grid) */
+  margin-left: 20px; /* Indentation from left edge */
+  padding-left: 20px; /* Space for list markers */
+  list-style-position: outside; /* Markers outside the text flow */
+}
+/* Specific list types */
+#documentation .accordion-content ul { list-style-type: disc; }
+#documentation .accordion-content ol { list-style-type: decimal; }
+
+#documentation .accordion-content li {
+  display: list-item !important; /* Ensure it behaves like a list item */
+  margin-bottom: 0.6em; /* Space between list items */
+  text-align: left; /* Ensure list item text is left-aligned */
+}
+
+/* Nested lists */
+#documentation .accordion-content ul ul,
+#documentation .accordion-content ol ol,
+#documentation .accordion-content ul ol,
+#documentation .accordion-content ol ul {
+  margin-top: 0.5em;
+  margin-bottom: 0.8em; /* Slightly more space after nested list */
+  margin-left: 20px; /* Further indentation */
+}
+#documentation .accordion-content ul ul { list-style-type: circle; }
+#documentation .accordion-content ol ol { list-style-type: lower-alpha; }
+#documentation .accordion-content ul ol { list-style-type: lower-roman; }
+#documentation .accordion-content ol ul { list-style-type: lower-alpha; } /* Example */
+
+
+/* Paragraphs */
+#documentation .accordion-content p {
+  margin-bottom: 1em;
+}
+
+/* Bold text */
+#documentation .accordion-content strong {
+  font-weight: bold;
+}
+
+/* Horizontal Rule */
+#documentation .accordion-content hr {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  margin: 2em 0;
+}
+
+/* Links */
+#documentation .accordion-content a {
+  color: var(--red);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+#documentation .accordion-content a:hover {
+  color: var(--yellow);
+  text-decoration: underline;
+}
+
+/* Tables */
+#documentation .accordion-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  /* For responsive tables, wrap table in a div with overflow-x: auto in HTML */
+}
+
+#documentation .accordion-content th,
+#documentation .accordion-content td {
+  border: 1px solid #ddd;
+  padding: 10px 12px; /* Adjust padding */
+  text-align: left; /* Ensure table cell content is left-aligned */
+  vertical-align: top; /* Align content to the top of the cell */
+}
+
+#documentation .accordion-content th {
+  background-color: var(--blue); /* Header background */
+  color: white; /* Header text color */
+  font-weight: bold;
+  font-family: "Bebas Neue", sans-serif; /* Consistent header font */
+  letter-spacing: 0.03em;
+}
+
+/* Zebra striping for table rows */
+#documentation .accordion-content tr:nth-child(even) td {
+  background-color: #f9f9f9;
+}
+
+/* iframe wrapper (for Tinkercad/Sketchfab) */
+#documentation .tinkercad-embed-wrapper,
+#documentation .sketchfab-embed-wrapper { /* Added sketchfab too */
+  position: relative;
+  padding-bottom: 62.5%; /* 16:10 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #f0f0f0; /* Placeholder background */
+  margin: 1em 0;
+  border-radius: 4px;
+}
+#documentation .tinkercad-embed-wrapper iframe,
+#documentation .sketchfab-embed-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+/* == Active Accordion State == */
+
+/* Header when item is active (optional style) */
+.accordion-item.active .accordion-header {
+  /* background-color: #e2e6ea; */ /* Example: Keep hover color */
+  
+}
+
+/* Icon rotation when item is active */
+.accordion-item.active .accordion-header .icon {
+  transform: rotate(45deg); /* Rotates '+' to 'x' */
+}
+
+/* Content when item is active */
+.accordion-item.active .accordion-content {
+  max-height: 4000px; /* Adjust if necessary, needs to be larger than any possible content height */
+  padding: 15px 18px; /* Restore vertical padding */
+  transition: max-height 0.4s ease-in, padding 0.4s ease-in; /* Slightly different easing for opening */
+}
+
+/* == Responsive Adjustments == */
+
+/* Limit content width on larger screens for better readability */
+@media (min-width: 992px) {
+  #documentation {
+    /* Increase padding on larger screens */
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  #documentation .doc-content {
+    max-width: 960px; /* Max width for the content area */
+    margin-left: auto;
+    margin-right: auto; /* Center the content area */
+  }
+}
+
+/* ============================================= */
+/* == End Documentation Section Styles == */
+/* ============================================= */
+
 
 @media screen and (min-width:200px) {
   .galleryimage-tall {

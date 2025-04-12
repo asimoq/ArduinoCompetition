@@ -53,3 +53,68 @@ galleryImages.forEach(function(image) {
   observer.observe(image);
 });
 
+// Accordion funkcionalitás
+document.addEventListener('DOMContentLoaded', function() {
+  const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+  accordionHeaders.forEach(header => {
+      header.addEventListener('click', function() {
+          // Az aktuális accordion elem ('accordion-item')
+          const currentItem = this.parentElement;
+
+          // Aktív osztály váltása az elemen
+          currentItem.classList.toggle('active');
+
+          // Az ikon szövegének váltása (+/-)
+          const icon = this.querySelector('.icon');
+          if (currentItem.classList.contains('active')) {
+              icon.textContent = '−'; // Vagy használhatsz rotate-et CSS-ben
+          } else {
+              icon.textContent = '+';
+          }
+
+          // Tartalom (accordion-content) elérése
+          const content = this.nextElementSibling;
+
+          // Magasság beállítása (CSS transition intézi a többit)
+          if (currentItem.classList.contains('active')) {
+              // Beállítás előtt lekérjük a görgetési magasságot, hogy a CSS tudja mire animáljon
+              content.style.maxHeight = content.scrollHeight + "px";
+          } else {
+              content.style.maxHeight = null; // Visszaállítjuk 0-ra (CSS alapján)
+          }
+
+          // Opcionális: Ha azt szeretnéd, hogy csak egy lehessen nyitva egyszerre (Accordion stílus)
+          // Kapcsold ki a kommentet a következő soroknál:
+          /*
+          accordionHeaders.forEach(otherHeader => {
+              if (otherHeader !== this) {
+                  const otherItem = otherHeader.parentElement;
+                  if (otherItem.classList.contains('active')) {
+                      otherItem.classList.remove('active');
+                      otherHeader.querySelector('.icon').textContent = '+';
+                      otherHeader.nextElementSibling.style.maxHeight = null;
+                  }
+              }
+          });
+          // Biztosítjuk, hogy a most kattintott elem nyitva legyen, ha előtte be volt zárva
+           if (!currentItem.classList.contains('active')) {
+               // A toggle már megtörtént feljebb, újra meg kell hívni a nyitáshoz
+               currentItem.classList.add('active');
+               icon.textContent = '−';
+               content.style.maxHeight = content.scrollHeight + "px";
+           }
+          */
+      });
+  });
+
+  // Ha vannak alapból nyitott elemek (pl. az első), itt lehet beállítani
+  // const firstItem = document.querySelector('.accordion-item');
+  // if (firstItem) {
+  //     firstItem.classList.add('active');
+  //     firstItem.querySelector('.accordion-header .icon').textContent = '−';
+  //     const firstContent = firstItem.querySelector('.accordion-content');
+  //     firstContent.style.maxHeight = firstContent.scrollHeight + "px";
+  // }
+});
+

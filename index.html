@@ -35,7 +35,8 @@
 
   <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         ☰ <!-- A Bootstrap ikon cseréje -->
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -47,7 +48,8 @@
             <a class="nav-link" href="#where">Where</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://kando-szakkoli.uni-obuda.hu/labirintusverseny/" target="_blank">Official Rules</a>
+            <a class="nav-link" href="https://kando-szakkoli.uni-obuda.hu/labirintusverseny/" target="_blank">Official
+              Rules</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#gallery">Gallery</a>
@@ -56,13 +58,16 @@
             <a class="nav-link" href="#render">3D model</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="#documentation">Documentation</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#footer">Contact</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  
+
 
   <div id="render" class="poster-container">
     <div class="Title-text">Team <span style="color: var(--yellow)">Jerry</span></div>
@@ -75,66 +80,81 @@
       About Us
     </h2>
     <div style="background-color: var(--yellow); z-index: 100;">
-      Our team, Jerry Team, is dedicated to the innovative design and development of maze-solving robots for the "Mobile Robots in the Maze" competition, hosted annually by Óbuda University. Our focus is on functionality and efficiency. Our latest, third-generation robot, Jerry 3.0, utilizes an ESP32 microcontroller, upgrading from our previous Arduino-based systems. It navigates using infrared distance sensors (processed with Kalman filters for accuracy), an RFID reader (connected via SPI) for directional information, and an MPU-6050 accelerometer/gyroscope for precise turn measurements. A key feature leverages the ESP32's WiFi capabilities to provide a web interface (via SoftAP mode) for real-time sensor data monitoring, PID parameter tuning, and loading different performance profiles (like "sprint mode") directly from a phone, significantly streamlining the testing and tuning process. Movement is controlled by two DC motors with an L298N driver. This website showcases the evolution of our robot designs over the years.
+      Our team, Jerry Team, is dedicated to the innovative design and development of maze-solving robots for the "Mobile
+      Robots in the Maze" competition, hosted annually by Óbuda University. Our focus is on functionality and
+      efficiency. Our latest, third-generation robot, Jerry 3.0, utilizes an ESP32 microcontroller, upgrading from our
+      previous Arduino-based systems. It navigates using infrared distance sensors (processed with Kalman filters for
+      accuracy), an RFID reader (connected via SPI) for directional information, and an MPU-6050 accelerometer/gyroscope
+      for precise turn measurements. A key feature leverages the ESP32's WiFi capabilities to provide a web interface
+      (via SoftAP mode) for real-time sensor data monitoring, PID parameter tuning, and loading different performance
+      profiles (like "sprint mode") directly from a phone, significantly streamlining the testing and tuning process.
+      Movement is controlled by two DC motors with an L298N driver. This website showcases the evolution of our robot
+      designs over the years.
     </div>
-</section>
+  </section>
 
-<section id="about" class="about">
+  <section id="about" class="about">
     <h2 style="margin: 0; margin-bottom: 5px; font-size: 5vw;">
       Our Results:
     </h2>
-    <div style="background-color: var(--blue); z-index: 100; padding-top: 5px; padding-bottom: 5px; border-top-left-radius: 5px; border-top-right-radius: 5px; text-align: center;">
+    <div
+      style="background-color: var(--blue); z-index: 100; padding-top: 5px; padding-bottom: 5px; border-top-left-radius: 5px; border-top-right-radius: 5px; text-align: center;">
       🥉 2023: Overall 3rd place (Arduino-based robot) 🥉
     </div>
     <div style="background-color: var(--red); z-index: 100; padding-top: 5px; padding-bottom: 5px; text-align: center;">
       🥉 2024: Overall 3rd place & 🔧 Mechanical Design Special Award (Enhanced Arduino robot) 🔧
     </div>
-    <div style="background-color: var(--blue); z-index: 100; padding-top: 5px; padding-bottom: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; text-align: center;">
+    <div
+      style="background-color: var(--blue); z-index: 100; padding-top: 5px; padding-bottom: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; text-align: center;">
       🥇 2025: Sprint 1st place & Overall 1st place (ESP32-based robot with web interface) 🥇
     </div>
-</section>
+  </section>
 
-<section id="where" class="where-section py-5">
-  <div class="container">
-    <div class="row align-items-center">
-      <!-- Map Column -->
-      <div class="col-lg-7 col-md-6 mb-4 mb-md-0">
-        <div class="map-container">
-          <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" class="rounded shadow-sm" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=OE-KGK%20G%20%C3%A9p%C3%BClet+(OE-KGK%20G%20%C3%A9p%C3%BClet)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" aria-label="Google Maps location of OE-KGK G épület">
-            <a href="https://www.gps.ie/">gps tracker sport</a>
-          </iframe>
+  <section id="where" class="where-section py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Map Column -->
+        <div class="col-lg-7 col-md-6 mb-4 mb-md-0">
+          <div class="map-container">
+            <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+              class="rounded shadow-sm"
+              src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=OE-KGK%20G%20%C3%A9p%C3%BClet+(OE-KGK%20G%20%C3%A9p%C3%BClet)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              aria-label="Google Maps location of OE-KGK G épület">
+              <a href="https://www.gps.ie/">gps tracker sport</a>
+            </iframe>
+          </div>
+        </div>
+        <!-- Text Column -->
+        <div class="col-lg-5 col-md-6">
+          <h2 class="race-heading mb-3 text-center"> <!-- Added text-center -->
+            The race
+          </h2>
+          <h2 class="mb-1">
+            Where?
+          </h2>
+          <h4 class="mb-1 fw-light">
+            Obuda University | Building G
+          </h4>
+          <p class="mb-3">
+            Budapest, Tavaszmező u. 17, 1084
+          </p>
+          <h2 class="mb-1">
+            When?
+          </h2>
+          <h4 class="mb-1 fw-light">
+            11 April 2025
+          </h4>
+          <p class="mb-3">
+            09:00-17:00
+          </p>
+          <a class="tickets d-block w-100 text-center" href="https://kando-szakkoli.uni-obuda.hu/labirintusverseny/"
+            target="_blank"> <!-- Changed to d-block w-100 text-center -->
+            Official Rules
+          </a>
         </div>
       </div>
-      <!-- Text Column -->
-      <div class="col-lg-5 col-md-6">
-        <h2 class="race-heading mb-3 text-center"> <!-- Added text-center -->
-          The race
-        </h2>
-        <h2 class="mb-1">
-          Where?
-        </h2>
-        <h4 class="mb-1 fw-light">
-          Obuda University | Building G
-        </h4>
-        <p class="mb-3">
-          Budapest, Tavaszmező u. 17, 1084
-        </p>
-        <h2 class="mb-1">
-          When?
-        </h2>
-        <h4 class="mb-1 fw-light">
-          11 April 2025
-        </h4>
-        <p class="mb-3">
-          09:00-17:00
-        </p>
-        <a class="tickets d-block w-100 text-center" href="https://kando-szakkoli.uni-obuda.hu/labirintusverseny/" target="_blank"> <!-- Changed to d-block w-100 text-center -->
-          Official Rules
-        </a>
-      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <div class="video-section">
     <div class="video-background">
@@ -322,6 +342,745 @@
       </div>
     </div>
   </section>
+
+  <section id="documentation" class="py-5">
+    <div class="container doc-content">
+      <h1 class="text-center mb-4" style="color: rgb(255, 255, 255);">Design Documentation</h1>
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          Jerry Team Members<span class="icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <ul>
+            <li>Csaba Gyarmati - OE-KVK</li>
+            <li>Mátyás Kertész - OE-KVK</li>
+            <li>Bendegúz András Szczuka - OE-NIK</li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          Literature Research <span class="icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <p>For us, literature research meant learning about existing similar robots, as well as the algorithms and
+            solution methods they use. We examined the technologies we intend to use in building the robot, such as RFID
+            readers and ultrasonic sensors. On Autodesk and academia.edu, we found several projects similar to ours,
+            which outlined the expected problems, challenges, and possible solutions for us. The experience gained in
+            this phase and the information found in the competition announcement made it easier for us to make decisions
+            regarding the design and functions of our robot.</p>
+          <p><strong>Initial solution:</strong><br>
+            In 1999, Michael Gims, Sonja Lenz, and Dirk Becker at the University of East London developed a micro-mouse.
+            They used a non-graph theory algorithm, the Wall Following Algorithm. Their robot did not move intelligently
+            on the map and could not solve a labyrinth with loops.</p>
+          <p><strong>Modern solution:</strong><br>
+            In 2017, Musfiqur Rahman at the University of Liberal Arts Bangladesh developed an Arduino-based
+            maze-solving robot.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          Experiences from the 2023 Competition <span class="icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <p>We encountered several problems at the 2023 competition:</p>
+          <ul>
+            <li>Robot size: Our robot was too large (20 x 20 cm); this year we will make it smaller to avoid collisions
+              with obstacles.</li>
+            <li>Drive: We used 4 driven wheels with tank-like movement. Due to adhesion and slippage problems, the robot
+              did not turn precisely. This year, the robot will have 2 driven wheels and a rotation measuring sensor.
+            </li>
+            <li>Ultrasonic distance meters: These components do not accurately determine the distance of very close
+              objects. This year we will relocate them on the robot and try to compensate for the problem through
+              software.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          Experiences from the 2024 Competition <span class="icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <p>Although we performed better at the 2024 competition compared to the previous year, we see the need for
+            further development of the robot based on the following experiences:</p>
+          <ul>
+            <li>Robot size: Although the robot was much smaller than the previous year, its turning circle diameter was
+              23 cm. For our new robot, we want to reduce this turning diameter to less than 17 cm.</li>
+            <li>Ultrasonic distance meters: The sampling time increases and decreases depending on the distance. This is
+              a problem because the control algorithms would expect input data at uniform intervals. This can be
+              circumvented by always waiting for the theoretical longest signal time before sending data to the
+              controller, but this would greatly reduce the number of input data per time unit. We will rely on IR
+              distance meters this year, as data can be read freely from these sensors at any time.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          Specification <span class="icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <h3>Goal</h3>
+          <p>The maze-solving robot's purpose is to navigate a maze using information obtained through the RFID reader,
+            while determining its position relative to the maze using infrared remote sensors and an accelerometer
+            sensor.</p>
+          <h3>Functional Requirements</h3>
+          <ul>
+            <li>The robot must be able to process and use information obtained through the RFID reader for navigation in
+              the maze.</li>
+            <li>Using infrared remote sensors, the robot must be able to determine its position relative to the walls.
+            </li>
+            <li>The robot must be able to turn precisely using an accelerometer.</li>
+            <li>The robot must be able to navigate to find the exit from the maze.</li>
+          </ul>
+          <h3>Non-functional Requirements</h3>
+          <ul>
+            <li>The car's frame will be 3D printed so that all parts of the robot can be mounted in any desired
+              location.</li>
+            <li>The maximum size of the robot is 15 × 15 cm to fit properly in the corridors.</li>
+            <li>The robot's drive is provided by 2 motors with tank-like control.</li>
+            <li>The RFID reader must be fast enough for continuous identification of RFID information cards.</li>
+            <li>The infrared remote sensors must be at an appropriate distance from the walls to accurately determine
+              the robot's position.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          Logical System Design <span class="icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <ol>
+            <li>Reading: The robot's RFID reader reads the information necessary to solve the maze, which is provided on
+              placed RFID tags.</li>
+            <li>Position determination: With the infrared remote sensors, the robot determines its own position in the
+              maze, as well as the walls in front of it and the branches of the track. The robot constantly strives to
+              stay in the middle of the corridor, if possible, relative to the two surrounding walls; if there are not
+              two walls, then measuring its position relative to the available wall.</li>
+            <li>Track following: The robot changes direction according to its position and the walls in front of it, and
+              selects the next step on the track.</li>
+            <li>Control: The 2 motors provide the robot's drive, which enables tank-like control. The operation of the
+              motors is controlled by a control unit.</li>
+            <li>When turning, the robot relies on the accelerometer to change direction precisely.</li>
+            <li>Reaching the goal: Following the previous steps, the robot solves the maze and reaches the exit.
+              Thorough planning and implementation of the above steps and tools will enable the efficient operation of
+              the robot and the successful solution of the track. Implementation will take place after the first
+              checkpoint.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          Calculations <span class="icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <p><strong>Power supply and output voltage selection</strong><br>
+            Since we use batteries for the robot's power supply, their voltage must be stabilized. With the two
+            batteries connected in series, the input voltage is the sum of the battery voltages, which varies between
+            6.4 V (discharged) and 8.4 V (charged) during use. The output voltage of the voltage stabilizer is
+            determined by the maximum input voltage of the microcontroller and the maximum voltage of the motor control.
+            The maximum voltage of the microcontroller is 20 V, and the maximum voltage of the motor control is 6 V, so
+            we get the desired supply voltage by choosing the latter.</p>
+          <p>It should be noted that selecting a higher value is also possible, which can later be corrected with the
+            duty cycle of the PWM signal in the motor control, so that the average voltage reaching the motor coils does
+            not exceed 6V.</p>
+          <p><strong>Microcontroller selection</strong><br>
+            For the robot to function, we need an adequate number of I/O pins on the microcontroller for the devices
+            listed in the logical system design.</p>
+          <p>The selected motor controller and sensors need the following pins:</p>
+          <ul>
+            <li>Motor controller:
+              <ul>
+                <li>4 digital pins</li>
+                <li>2 PWM pins</li>
+              </ul>
+            </li>
+            <li>3 ultrasonic distance meters
+              <ul>
+                <li>6 digital pins</li>
+              </ul>
+            </li>
+            <li>Gyroscope and RFID module
+              <ul>
+                <li>I2C output</li>
+              </ul>
+            </li>
+          </ul>
+          <p>In total, we need 12 outputs and one I2C communication channel. Among the listed boards (Arduino nano and
+            Wemos D1 R32), both use the same chip in different packages. The Atmega328 microcontroller on them has the
+            outputs we need, so either would be suitable for us. We decided on the Wemos D1 R32.</p>
+          <p><strong>Maximum robot base size</strong><br>
+            The robot must be able to turn in place or turn around in any corner or even dead end. While turning, the
+            robot must be smaller than the distance between the walls. Based on the dimensions described in the
+            regulations, this size is 28.5 cm.</p>
+          <p>According to the plans created in Tinkercad, the length and width of the robot (including wheels) is
+            approximately 16 × 16 cm. The diameter of this square is 22.6 cm. The robot's axis of rotation will not be
+            in the center of this square, but in the middle between the two wheels. As shown in the image below, based
+            on the calculated dimensions, the robot will need 16.2 cm for a complete turnaround.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          Schedule <span class="icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <table>
+            <thead>
+              <tr>
+                <th>Educational week</th>
+                <th>Tasks</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Precise interpretation of the competition announcement, identification of possible problems</td>
+                <td>2025.02.12.-02.18.</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Literature research, searching for and understanding other similar projects, analyzing problems of
+                  our previous robot. Based on the knowledge acquired in the first lecture, designing the robot's drive.
+                </td>
+                <td>2025.02.19.-02.25.</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Building the robot and designing software for basic functions, building a test track</td>
+                <td>2025.03.25.</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>Software development and testing</td>
+                <td>2025.03.17.-04.10.</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>Evaluation and analysis of system-level and final tests, preparation of documentation</td>
+                <td>2025.04.03.-04.11.</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>Project presentation</td>
+                <td>2025.04.11.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          Physical System Design <span class="icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <ol>
+            <li>Frame: The robot's frame will be made using 3D printing, and will consist of several rectangular
+              platforms connected with spacers, with dimensions of 16 × 13 × 10 cm.</li>
+            <li>Motors: The drive will be provided by 2 DC motors, which enable tank-like control. The motors are placed
+              at the bottom of the robot. A ball caster at the back of the robot will provide support.</li>
+            <li>Infrared remote sensors: The robot has three infrared remote sensors that serve to determine the robot's
+              position and navigate on the track. Two remote sensors are mounted on the sides of the robot, and one on
+              the front.</li>
+            <li>Battery: For the robot's power supply, we use 2 3.7-volt Li-Ion batteries, which are mounted on the
+              bottom of the robot.</li>
+            <li>RFID reader: The robot uses an RFID reader to read the information needed to solve the maze. The reader
+              is placed at the front of the robot, adjusted downward.</li>
+            <li>Accelerometer: Precise turning is guaranteed by an accelerometer.</li>
+            <li>Microcontroller: For the robot's control, we use a Wemos D1 R32, which connects the hardware components
+              and makes the robot's operation programmable. The microcontroller is placed on top of the robot.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          Cost Plan, Procurement List <span class="icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <h4>Team Name: Jerry 3.0</h4>
+          <div style="overflow-x:auto;"> <!-- Hozzáadva a vízszintes görgetéshez kis képernyőn -->
+            <table>
+              <thead>
+                <tr>
+                  <th>Item Name</th>
+                  <th>Price/Piece (net)</th>
+                  <th>Price/Piece (gross)</th>
+                  <th>Quantity</th>
+                  <th>Total Price (net)</th>
+                  <th>Total Price (gross)</th>
+                  <th>Purchase Link</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Wemos D1 R32</td>
+                  <td>2 372 Ft</td>
+                  <td>3 013 Ft</td>
+                  <td>1</td>
+                  <td>2 372 Ft</td>
+                  <td>3 013.0 Ft</td>
+                  <td><a href="https://www.hestore.hu/prod_10044306.html" target="_blank" rel="noopener noreferrer">Link</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Robot platform, 2wd</td>
+                  <td>8 454 Ft</td>
+                  <td>10 737.00 Ft</td>
+                  <td>0</td>
+                  <td>- Ft</td>
+                  <td>- Ft</td>
+                  <td><a href="https://www.hestore.hu/prod_10042323.html" target="_blank" rel="noopener noreferrer">Link</a></td>
+                  <td>Only motors and wheels would be used from the platform</td>
+                </tr>
+                <tr>
+                  <td>RM-17 motor</td>
+                  <td>872 Ft</td>
+                  <td>1 107.00 Ft</td>
+                  <td>2</td>
+                  <td>1 744 Ft</td>
+                  <td>2 214.0 Ft</td>
+                  <td><a href="https://www.hestore.hu/kereses/RM-17" target="_blank" rel="noopener noreferrer">Link</a></td> <!-- Módosított link a kereséshez -->
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>H-Bridge driver, max 2A</td>
+                  <td>1 388 Ft</td>
+                  <td>1 763.00 Ft</td>
+                  <td>1</td>
+                  <td>1 388 Ft</td>
+                  <td>1 763.0 Ft</td>
+                  <td><a href="https://www.hestore.hu/prod_10036621.html" target="_blank" rel="noopener noreferrer">Link</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>RC522-MFRC</td>
+                  <td>1 650 Ft</td>
+                  <td>2 096.00 Ft</td>
+                  <td>1</td>
+                  <td>1 650 Ft</td>
+                  <td>2 096.0 Ft</td>
+                  <td><a href="https://www.hestore.hu/prod_10035520.html" target="_blank" rel="noopener noreferrer">Link</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>NTAG213-STCK27</td>
+                  <td>307 Ft</td>
+                  <td>389.00 Ft</td>
+                  <td>3</td>
+                  <td>921 Ft</td>
+                  <td>1 167.0 Ft</td>
+                  <td><a href="https://www.hestore.hu/prod_10037635.html" target="_blank" rel="noopener noreferrer">Link</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>GP2Y0A51SK0F</td>
+                  <td>2 358 Ft</td>
+                  <td>2 995.00 Ft</td>
+                  <td>3</td>
+                  <td>7 074 Ft</td>
+                  <td>8 985.0 Ft</td>
+                  <td><a href="https://www.hestore.hu/prod_10046268.html" target="_blank" rel="noopener noreferrer">Link</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>GP2Y0A41SK0F</td>
+                  <td>2 529 Ft</td>
+                  <td>3 211 Ft</td>
+                  <td>1</td>
+                  <td>2 529 Ft</td>
+                  <td>3 211.0 Ft</td>
+                  <td><a href="https://www.hestore.hu/prod_10035591.html" target="_blank" rel="noopener noreferrer">Link</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Accelerometer-MPU-6050</td>
+                  <td>1 308 Ft</td>
+                  <td>1 661.00 Ft</td>
+                  <td>1</td>
+                  <td>1 308 Ft</td>
+                  <td>1 661.0 Ft</td>
+                  <td><a href="https://www.hestore.hu/prod_10035607.html" target="_blank" rel="noopener noreferrer">Link</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>NCR18650B-NOPROT</td>
+                  <td>2 563 Ft</td>
+                  <td>3 255.00 Ft</td>
+                  <td>2</td>
+                  <td>5 126 Ft</td>
+                  <td>6 510.0 Ft</td>
+                  <td><a href="https://www.hestore.hu/prod_10045980.html" target="_blank" rel="noopener noreferrer">Link</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>PWRBID-2x18650</td>
+                  <td>2 073 Ft</td>
+                  <td>2 633.00 Ft</td>
+                  <td>1</td>
+                  <td>2 073 Ft</td>
+                  <td>2 633.0 Ft</td>
+                  <td><a href="https://www.hestore.hu/prod_10044434.html" target="_blank" rel="noopener noreferrer">Link</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Arduino Prototype shield</td>
+                  <td>1 532 Ft</td>
+                  <td>1 946.00 Ft</td>
+                  <td>1</td>
+                  <td>1 532 Ft</td>
+                  <td>1 946.0 Ft</td>
+                  <td><a href="https://www.hestore.hu/prod_10036622.html" target="_blank" rel="noopener noreferrer">Link</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3D printed frame</td>
+                  <td>- Ft</td>
+                  <td>- Ft</td>
+                  <td>1</td>
+                  <td>- Ft</td>
+                  <td>- Ft</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Ribbon cable - RC-40-20/MF</td>
+                  <td>1 059 Ft</td>
+                  <td>1 345.00 Ft</td>
+                  <td>1</td>
+                  <td>1 059 Ft</td>
+                  <td>1 345.0 Ft</td>
+                  <td><a href="https://www.hestore.hu/kereses/RC-40-20%2FMF" target="_blank" rel="noopener noreferrer">Link</a></td> <!-- Módosított link a kereséshez -->
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Ribbon cable - RC-40-20/MM</td>
+                  <td>907 Ft</td>
+                  <td>1 152.00 Ft</td>
+                  <td>1</td>
+                  <td>907 Ft</td>
+                  <td>1 152.0 Ft</td>
+                  <td><a href="https://www.hestore.hu/kereses/RC-40-20%2FMM" target="_blank" rel="noopener noreferrer">Link</a></td> <!-- Módosított link a kereséshez -->
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Ribbon cable - RC-40-20/FF</td>
+                  <td>838 Ft</td>
+                  <td>1 064.00 Ft</td>
+                  <td>1</td>
+                  <td>838 Ft</td>
+                  <td>1 064.0 Ft</td>
+                  <td><a href="https://www.hestore.hu/kereses/RC-40-20%2FFF" target="_blank" rel="noopener noreferrer">Link</a></td> <!-- Módosított link a kereséshez -->
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div> <!-- /overflow-x -->
+      
+          <h4>Cost Summary</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Net</th>
+                <th>Gross</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Self-cost:</td>
+                <td>5 977 Ft</td>
+                <td>7 592 Ft</td>
+              </tr>
+              <tr>
+                <td>From component base:</td>
+                <td>24 544 Ft</td>
+                <td>31 168 Ft</td>
+              </tr>
+              <tr>
+                <td><strong>Total:</strong></td>
+                <td><strong>30 521 Ft</strong></td>
+                <td><strong>38 760 Ft</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          Device Descriptions <span class="icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <p><strong>Wemos D1 R32:</strong></p>
+          <ul>
+            <li>The Wemos D1 R32 microcontroller will be the control unit for the robot.</li>
+            <li>All sensors and motor control are the responsibility of the Wemos D1 R32.</li>
+            <li>Technical characteristics:
+              <ul>
+                <li>Microcontroller: ESP WROOM 32</li>
+                <li>Operating Voltage: 3.3V</li>
+                <li>Input Voltage (recommended): 7-12V</li>
+                <li>Input Voltage (limits): 6-20V</li>
+                <li>Digital I/O Pins: 34</li>
+                <li>Analog Input Pins: 16</li>
+                <li>DC Current per I/O Pin: 40 mA</li>
+                <li>DC Current for 3.3V Pin: 250 mA</li>
+                <li>Flash Memory: 4MB</li>
+                <li>SRAM: 520 KB (ATmega328)</li>
+                <li>Clock Speed: 240MHz</li>
+                <li>Length: 68.5 mm</li>
+                <li>Width: 53.7 mm</li>
+                <li>Weight: 25 g</li>
+              </ul>
+            </li>
+          </ul>
+          <p><strong>RFID reader:</strong></p>
+          <ul>
+            <li>Task: reading information about the track to be solved</li>
+            <li>Operation: detects RFID chips placed on the track and reads and transmits the information stored on them
+              to the robot's control unit</li>
+            
+          </ul>
+          <p><strong>Infrared remote sensors:</strong></p>
+          <ul>
+            <li>Task: measuring the robot's distance from the wall and detecting obstacles in front of it</li>
+            <li>Operation: infrared rays emitted by the sensor are reflected from objects, then the detector senses
+              these reflected waves. Based on the intensity and reflection time of the infrared radiation, it determines
+              the distance of the object.</li>
+            <li>Technical characteristics:
+              <ul>
+                <li>GP2Y0A51SK0F 2-15 cm
+                  <ul>
+                    <li>Maximum range: 15 cm</li>
+                    <li>Minimum range: 2 cm</li>
+                    <li>Sampling rate: 60 Hz</li>
+                    <li>Minimum operating voltage: 4.5 V</li>
+                    <li>Maximum operating voltage: 5.5 V</li>
+                    <li>Supply current: 12 mA</li>
+                    <li>Output type: analog voltage</li>
+                    <li>Output voltage differential: 1.65 V</li>
+                  </ul>
+                </li>
+                <li>GP2Y0A41SK0F 4-30 cm
+                  <ul>
+                    <li>Maximum range: 30 cm</li>
+                    <li>Minimum range: 4 cm</li>
+                    <li>Sampling rate: 60 Hz</li>
+                    <li>Minimum operating voltage: 4.5 V</li>
+                    <li>Maximum operating voltage: 5.5 V</li>
+                    <li>Supply current: 12 mA</li>
+                    <li>Output type: analog voltage</li>
+                    <li>Output voltage differential: 2.3 V</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <p><strong>Motor controller:</strong></p>
+          <ul>
+            <li>Task: controlling the robot's drive</li>
+            <li>Operation: controls the speed and direction of the motors with enabling and PWM signals provided by the
+              microcontroller</li>
+            <li>Technical characteristics:
+              <ul>
+                <li>Control Chip: L298N</li>
+                <li>Logical Voltage: 5V</li>
+                <li>Drive Voltage: 5V-35V</li>
+                <li>Logical Current: 0mA-36mA</li>
+                <li>Drive Current: 2A (MAX single bridge)</li>
+                <li>Storage Temperature: -20 to +135</li>
+                <li>Max Power: 25W</li>
+                <li>Size: Approx. 43 × 43 × 27 mm / 1.69" x 1.69" x 1.07"</li>
+              </ul>
+            </li>
+          </ul>
+          <p><strong>Accelerometer:</strong></p>
+          <ul>
+            <li>Task: Precise measurement of the robot's rotation</li>
+            <li>Technical characteristics:
+              <ul>
+                <li>Chip: MPU-6050</li>
+                <li>Power supply: 3V-5v</li>
+                <li>Communication modes: standard IIC communication protocol</li>
+                <li>Chip built-in 16 bit AD converter, 16 bits of data output</li>
+                <li>Gyroscope range: +2500/500/1000/2000°/s</li>
+                <li>Acceleration range: ±2 ±4 ±8 ±16 g</li>
+                <li>Pin Definition: VCC, GND, SCL, SDA, XDA, XCL, ADO, INT</li>
+                <li>Pitch: 2.54mm</li>
+                <li>Board size: 20mm(length)*16mm(width)</li>
+              </ul>
+            </li>
+          </ul>
+          <p><strong>Power supply module (XL6009):</strong></p>
+          <ul>
+            <li>Task: Providing continuous voltage to the robot</li>
+            
+          </ul>
+          <p><strong>Battery (NCR18650B):</strong></p>
+          <ul>
+            <li>Task: Providing power source for the robot</li>
+            
+          </ul>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          3D Model <span class="icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <p>Interactive 3D model of Jerry 3.0 created in Tinkercad:</p>
+          <!-- Responsive iframe wrapper -->
+          <div class="tinkercad-embed-wrapper" style="position: relative; padding-bottom: 62.5%; /* Adjust aspect ratio if needed (e.g., 75% for 4:3) */ height: 0; overflow: hidden; max-width: 100%; background: #f0f0f0; margin: 1em 0; border-radius: 4px;">
+            <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+                    width="100%" 
+                    height="100%" 
+                    src="https://www.tinkercad.com/embed/kPeoK5r6uQc?autospin=true" 
+                    frameborder="0" 
+                    marginwidth="0" 
+                    marginheight="0" 
+                    scrolling="no"
+                    allowfullscreen>
+            </iframe>
+          </div>
+          <p>You can also view the model directly on <a href="https://www.tinkercad.com/things/kPeoK5r6uQc-jerry-30" target="_blank" rel="noopener noreferrer">Tinkercad</a>.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          Software Plans <span class="icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <p>The program must consist of the following modules:</p>
+          <p><strong>RFID reader module:</strong><br>
+            The program uses this reader to read pre-programmed cards into the program.</p>
+          <p><strong>Infrared remote sensor module:</strong><br>
+            The program uses this module to sense the distance from obstacles in front of it.</p>
+          <p><strong>Accelerometer module:</strong><br>
+            The program converts data from the accelerometer into a usable form to determine the robot's rotation.</p>
+          <p><strong>Motor controller:</strong><br>
+            The program uses this module to control the robot's movement.</p>
+          <p><strong>Main cycle module (loop):</strong><br>
+            This module contains the robot's decision-making logic.</p>
+          <p>Necessary functions:</p>
+          <ul>
+            <li>Movement directions</li>
+            <li>Distance measurement from a given sensor</li>
+            <li>Z-axis rotation measurement from the accelerometer</li>
+            <li>Straight movement with wall alignment</li>
+            <li>Setup: pin assignments, initialization of RFID reader and gyroscope</li>
+            <li>Loop: Implementation of orientation logic</li>
+          </ul>
+          <p>Loop explanation:</p>
+          <ul>
+            <li>The robot moves forward, aligning itself with the walls until:
+              <ul>
+                <li>i. A wall gets in its way: it turns in the direction with more space and then continues its path
+                </li>
+                <li>ii. An RFID data card gets in its way: It acts according to the data:
+                  <ol>
+                    <li>Turns right or left</li>
+                    <li>In case of an exit, it stops</li>
+                  </ol>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          References <span class="icon">+</span>
+        </button>
+        <div class="accordion-content">
+          
+      
+          <h4>Competition & Rules</h4>
+          <ul>
+            <li>
+              <a href="https://kando-szakkoli.uni-obuda.hu/labirintusverseny/" target="_blank" rel="noopener noreferrer">Óbuda University - Mobile Robots in the Maze Competition Page</a>
+            </li>
+          </ul>
+      
+          <h4>Models & Visualizations</h4>
+          <ul>
+            <li>
+              <a href="https://www.tinkercad.com/things/kPeoK5r6uQc-jerry-30" target="_blank" rel="noopener noreferrer">Jerry 3.0 Tinkercad Model</a>
+            </li>
+          </ul>
+      
+           <h4>Components (Hestore Links)</h4>
+          <ul>
+            <li>
+              <a href="https://www.hestore.hu/prod_10044306.html" target="_blank" rel="noopener noreferrer">Wemos D1 R32</a>
+            </li>
+            <li>
+              <a href="https://www.hestore.hu/prod_10042323.html" target="_blank" rel="noopener noreferrer">Robot platform, 2wd (Source for wheels/motors)</a>
+            </li>
+            <li>
+              <a href="https://www.hestore.hu/kereses/RM-17" target="_blank" rel="noopener noreferrer">RM-17 motor (Search)</a>
+            </li>
+            <li>
+              <a href="https://www.hestore.hu/prod_10036621.html" target="_blank" rel="noopener noreferrer">H-Bridge driver, max 2A</a>
+            </li>
+            <li>
+              <a href="https://www.hestore.hu/prod_10035520.html" target="_blank" rel="noopener noreferrer">RC522-MFRC RFID Reader</a>
+            </li>
+            <li>
+              <a href="https://www.hestore.hu/prod_10037635.html" target="_blank" rel="noopener noreferrer">NTAG213-STCK27 RFID Tag</a>
+            </li>
+            <li>
+              <a href="https://www.hestore.hu/prod_10046268.html" target="_blank" rel="noopener noreferrer">GP2Y0A51SK0F IR Sensor (2-15 cm)</a>
+            </li>
+            <li>
+              <a href="https://www.hestore.hu/prod_10035591.html" target="_blank" rel="noopener noreferrer">GP2Y0A41SK0F IR Sensor (4-30 cm)</a>
+            </li>
+            <li>
+              <a href="https://www.hestore.hu/prod_10035607.html" target="_blank" rel="noopener noreferrer">Accelerometer-MPU-6050</a>
+            </li>
+            <li>
+              <a href="https://www.hestore.hu/prod_10045980.html" target="_blank" rel="noopener noreferrer">NCR18650B-NOPROT Battery</a>
+            </li>
+            <li>
+              <a href="https://www.hestore.hu/prod_10044434.html" target="_blank" rel="noopener noreferrer">PWRBID-2x18650 Battery Holder</a>
+            </li>
+            <li>
+              <a href="https://www.hestore.hu/prod_10036622.html" target="_blank" rel="noopener noreferrer">Arduino Prototype shield</a>
+            </li>
+            <li>
+              <a href="https://www.hestore.hu/kereses/RC-40-20%2FMF" target="_blank" rel="noopener noreferrer">Ribbon cable - RC-40-20/MF (Search)</a>
+            </li>
+            <li>
+              <a href="https://www.hestore.hu/kereses/RC-40-20%2FMM" target="_blank" rel="noopener noreferrer">Ribbon cable - RC-40-20/MM (Search)</a>
+            </li>
+            <li>
+              <a href="https://www.hestore.hu/kereses/RC-40-20%2FFF" target="_blank" rel="noopener noreferrer">Ribbon cable - RC-40-20/FF (Search)</a>
+            </li>
+          </ul>
+          <p><em>Note: General research sources like Autodesk and academia.edu were also consulted but specific links were not listed in the source text.</em></p>
+          <br>
+        </div>
+      </div>
+
+      <hr>
+    </div><!-- /.doc-content -->
+  </section>
+
   <div id="footer" class="footer">
     <ul>
       <li><a href="https://www.linkedin.com/in/szczuka-bende/" target="_blank">LinkedIn</a></li>
