@@ -1,119 +1,152 @@
 :root {
-  --blue: rgb(57,161,164);
-  --yellow: rgb(255,176,20);
-  --red: rgb(218,80,77);
+  --blue: rgb(57, 161, 164);
+  --yellow: rgb(255, 176, 20);
+  --red: rgb(218, 80, 77);
 }
 
-body{
+body {
   background-color: var(--blue);
   color: var(--blue);
   flex-direction: column;
   font-family: "Space Grotesk", sans-serif;
   padding: 0;
   margin: 0;
-  
+
 }
 
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-.hamburger-icon {
-  display: block;
-  overflow: hidden;
-  position: fixed;
-  cursor: pointer;
-  top: 0;
-  right: 0;
-  z-index: 1010;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  transition: color 0.3s ease;
-  transition: text-shadow 0.3s ease;
-  text-shadow: 0px 0px 50px rgba(0,0,0,0.2);
-}
 
-.hamburger-icon:active{
-  color: rgba(255, 255, 255, 0.5);
-  text-shadow: 0px 0px 50px rgba(0, 0, 0, 0.32);
-  
-}
-
-.navbar {
-  display: block;
+.custom-navbar {
+  /* Új osztály a HTML-ben a stílusok elkerülése érdekében */
   background: rgba(163, 163, 163, 0.438);
   backdrop-filter: saturate(180%) blur(10px);
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  max-height: 0%;
-  transition: max-height 0.3s ease;
-  z-index: 1001;
+  /* Eltávolítjuk a Bootstrap alapértelmezett hátterét, ha a bg-* osztályt használtuk */
+  /* background-color: transparent !important; */
+  /* Erre már nincs szükség, mert levettük a bg-light osztályt */
 }
 
-.navbar.expanded {
-  max-height: 400px;
-}
-
-
-.navbar a {
-  float: left;
-  display: block;
+/* Navigációs linkek alapértelmezett színe */
+.custom-navbar .navbar-nav .nav-link {
   color: white;
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  /* Középre igazítás, mint az eredetiben */
+  padding-left: 16px;
+  /* Eredeti padding */
+  padding-right: 16px;
+  /* Eredeti padding */
   font-size: 19px;
+  /* Eredeti betűméret */
+  border-radius: 5px;
+  /* Eredeti lekerekítés */
 }
 
-.navbar a:hover {
+/* Navigációs linkek hover állapota */
+.custom-navbar .navbar-nav .nav-link:hover,
+.custom-navbar .navbar-nav .nav-link:focus {
+  /* Focus állapotra is érdemes alkalmazni */
   background-color: var(--yellow);
-  backdrop-filter: saturate(180%) blur(10px);
-  color: white;
+  color: white !important;
+  /* Fontos, hogy felülírja a Bootstrap alapértelmezett sötét színét */
+  /* Megtarthatjuk a blur effektust hoveren is, ha szeretnénk */
+  /* backdrop-filter: saturate(180%) blur(10px); */
 }
 
-.navbar a.active {
-  background-color: var(--yellow);
+/* Hamburger gomb stílusai */
+.custom-navbar .navbar-toggler {
+  border: none;
+  /* Keret eltávolítása */
   color: white;
+  /* Ikon színe */
+  font-size: 2rem;
+  /* Méret növelése, hasonlóan az eredetihez */
+  padding: 0.5rem 0.75rem;
+  /* Igazítás */
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  /* Eredeti árnyék */
+  
 }
 
-.poster-container{
+/* Hamburger gomb fókusz állapotának eltávolítása (kék keret) */
+.custom-navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Kis képernyőn a lenyíló menü linkjei (opcionális, ha szükséges az igazítás) */
+@media (max-width: 991.98px) {
+
+  /* Bootstrap lg töréspontja */
+  .custom-navbar .navbar-nav .nav-link {
+    padding-left: 16px;
+    padding-right: 16px;
+    /* Ha balra zártak voltak az eredetiben kis képernyőn */
+    /* text-align: left; */
+  }
+
+  /* Ha a teljes lenyíló menü hátterét is módosítani akarod */
+  .custom-navbar .navbar-collapse {
+    background: rgba(255, 255, 255, 0.838);
+    /* Az eredeti háttér kis képernyőn */
+    backdrop-filter: saturate(180%) blur(10px);
+    margin-top: 10px;
+    /* Kis térköz a gomb és a menü között */
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .custom-navbar .navbar-nav .nav-link {
+    color: var(--blue);
+    border-radius: 5px;
+
+    /* Az eredeti szín kis képernyőn */
+  }
+
+  .custom-navbar .navbar-nav .nav-link:hover,
+  .custom-navbar .navbar-nav .nav-link:focus {
+    background-color: var(--yellow);
+    color: white !important;
+  }
+}
+
+
+.poster-container {
   position: relative;
   text-align: center;
-  background-image:url(images/Background_SuperBlured.jpg);
+  background-image: url(images/Background_SuperBlured.jpg);
   background-size: cover;
-  background-position:top;
+  background-position: top;
   background-repeat: no-repeat;
   height: 100vh;
   overflow: hidden;
 }
 
-.background-image{
+.background-image {
   max-width: 100%;
 }
-.Title-text{
+
+.Title-text {
   position: absolute;
   top: 36%;
-  font-size:17.5vw;
+  font-size: 17.5vw;
   z-index: 0;
-  
-  left:0; right: 0;
+
+  left: 0;
+  right: 0;
   font-family: "Bebas Neue", sans-serif;
-  
+
   letter-spacing: 0.1em;
   color: var(--blue);
   transition: text-shadow 0.15s;
   pointer-events: none;
   background-color: rgba(255, 255, 255, 0.856);
-  
+
 }
 
-.about{
+.about {
   background-color: var(--yellow);
   color: white;
   padding: 50px;
@@ -123,36 +156,105 @@ html, body {
   font-size: x-large;
 }
 
-.about-title{
+.about-title {
   margin: 0px;
-  margin-bottom:20px;
+  margin-bottom: 20px;
 }
 
-.where{
-  display: flex;
-  flex-direction: row;
+
+.where-section {
   background-color: var(--blue);
-  height: 430px;
   color: white;
-  
-}
-.where-text{
-  font-size: 110%;
-  padding: 0;
+  /* Szövegszín a szekción belül */
 }
 
-.video-section{
-  height:40vw;
+.map-container iframe {
+  /* Biztosítja, hogy az iframe ne lógjon ki a szülő konténerből */
+  max-width: 100%;
+  vertical-align: middle;
+  /* Megszünteti az esetleges alsó teret */
+}
+
+/* Módosítsd ezt a szabályt */
+.race-heading {
+  background-color: var(--red);
+  font-size: 5vw;
+  /* Eredeti reszponzív méret */
+  border-radius: 5px;
+  padding-top: 0.2em;
+  /* Függőleges padding */
+  padding-bottom: 0.2em;
+  /* Függőleges padding */
+  /* padding: 0.2em 0.5em 0.2em 1.5vw; <- Ezt a sort töröld vagy kommentezd ki */
+  color: white;
+  /* display: inline-block; <- Ezt a sort töröld vagy kommentezd ki */
+  line-height: 1.2;
+  /* Igazítás */
+  width: 100%;
+  /* Biztosítja, hogy kitöltse a szülőt */
+}
+
+/* A .tickets szabály változatlan maradhat, mert a HTML-ben adtuk meg a d-block, w-100 és text-center osztályokat */
+.tickets {
+  /* display: inline-block; <- Ezt a sort töröld, ha még ott van */
+  padding: 15px 30px;
+  /* A függőleges padding fontos marad */
+  margin: 0;
+  margin-top: 10px;
+  /* Vagy használj Bootstrap mt-3 osztályt a HTML-ben */
+  background-color: var(--yellow);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.05);
+  color: white;
+  text-decoration: none;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: xx-large;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  /* A text-align: center; szükségtelen itt, mert a text-center osztály kezeli */
+}
+
+.tickets:hover {
+  background-color: var(--red);
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.05);
+  transform: scale(0.98);
+  /* Kisebb scale, hogy ne lógjon ki nagyon */
+}
+
+.tickets:active {
+  transform: scale(0.95);
+  /* Kisebb scale */
+}
+
+
+/* Opcionális: Ha a vw méretet korlátozni akarod nagyobb képernyőn */
+@media (min-width: 992px) {
+
+  /* Bootstrap lg töréspont */
+  .race-heading {
+    font-size: 2.5rem;
+    /* Fix méret nagyobb képernyőn */
+  }
+}
+
+
+.video-section {
+  height: 40vw;
 }
 
 .video-background {
   background: var(--blue);
   background-color: var(--blue);
-  position:relative;
-  top: 0; right: 0; bottom: 0; left: 0;
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: -99;
   height: 150%;
 }
+
 .video-foreground,
 .video-background iframe {
   position: relative;
@@ -162,56 +264,57 @@ html, body {
   height: 110%;
   pointer-events: none;
 }
+
 #vidtop-content {
-	color: #fff;
+  color: #fff;
   position: relative;
   z-index: 1;
 }
-.vid-info { position: absolute; top: 0; right: 0; width: 33%; background: rgba(0,0,0,0.3); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
-.vid-info h1 { font-size: 2rem; font-weight: 700; margin-top: 0; line-height: 1.2; }
-.vid-info a { display: block; color: #fff; text-decoration: none; background: rgba(0,0,0,0.5); transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center; }
+
+.vid-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 33%;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  padding: 1rem;
+  font-family: Avenir, Helvetica, sans-serif;
+}
+
+.vid-info h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+.vid-info a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.5);
+  transition: .6s background;
+  border-bottom: none;
+  margin: 1rem auto;
+  text-align: center;
+}
 
 @media all and (max-width: 600px) {
-.vid-info { width: 50%; padding: .5rem; }
-.vid-info h1 { margin-bottom: .2rem; }
+  .vid-info {
+    width: 50%;
+    padding: .5rem;
+  }
+
+  .vid-info h1 {
+    margin-bottom: .2rem;
+  }
 }
+
 @media all and (max-width: 500px) {
-.vid-info .acronym { display: none; }
-}
-
-.icon{
-  flex: 1;
-  height: 100px;
-  text-align: left;
-  padding: 15px;
-  margin: 0;
-}
-
-.tickets {
-  display: inline-block;
-  padding: 15px 30px; 
-  margin: 0;
-  margin-top: 10px;
-  background-color: var(--yellow);
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.05);
-  color: white;
-  text-decoration: none;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: xx-large;
-  border: none;
-  border-radius: 2px;
-  cursor: pointer;
-  transition: background-color 0.2s, transform 0.2s;
-}
-
-.tickets:hover {
-  background-color: var(--red);
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.05);
-  transform: scale(0.95);
-}
-
-.tickets:active {
-  transform: scale(0.85);
+  .vid-info .acronym {
+    display: none;
+  }
 }
 
 .github-container {
@@ -252,13 +355,13 @@ html, body {
   transform: scale(0.85);
 }
 
-.galeria-text{
+.galeria-text {
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 0.2em;
-  
+
 }
 
-.gallery{
+.gallery {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -266,15 +369,15 @@ html, body {
   padding: 1.5rem;
   position: relative;
   text-align: center;
-  background-image:url(images/Background_Blured.jpg);
+  background-image: url(images/Background_Blured.jpg);
   background-size: cover;
-  background-position:center;
+  background-position: center;
   background-repeat: no-repeat;
-  
+
 }
 
 
-.galleryimage{
+.galleryimage {
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -290,17 +393,16 @@ html, body {
   font-size: 3rem;
   color: rgba(0, 0, 0, 0);
   transition: transform 500ms, box-shadow 500ms, background-color 700ms;
-  
-  
-  
+
+
+
 }
 
-.render{
+.render {
   scale: 135%;
-  overflow:visible;
+  overflow: visible;
   left: 0%;
   transform: translateY(35px) translateX(10px)
-  
 }
 
 .galleryimage:hover {
@@ -309,49 +411,35 @@ html, body {
 }
 
 @media screen and (min-width:200px) {
-  .galleryimage-tall{
+  .galleryimage-tall {
     grid-row: span 2 / auto;
   }
 
-  .galleryimage-wide{
+  .galleryimage-wide {
     grid-column: span 2 / auto;
   }
 
-  .map{
+  .map {
     flex: 2;
   }
 
-  
+
 }
 
-@media screen and (min-width:1900px) {
-  .where-text{
-    flex: 2;
-  }
-}
 
 
 
 @media screen and (max-width:1000px) {
-  .navbar a{
-    padding-right: 50%;
-    color: var(--blue);
-    
-  }
-  .hamburger-icon{
-    font-size: 50px;
-  }
-  .Budapesten-text{
+
+  .Budapesten-text {
     top: 20%
   }
-  .navbar{
-  background: rgba(255, 255, 255, 0.838);
-  }
+
 }
 
 @media screen and (min-width:440px) {
 
-  .Title-text{
+  .Title-text {
     top: 15%
   }
 
@@ -359,56 +447,47 @@ html, body {
 
 
 @media screen and (min-width:1000px) {
-  .gallery{
-    
+  .gallery {
+
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-auto-rows: 300px;
-   
-    
+
+
   }
-  .about{
+
+  .about {
     z-index: 50;
     padding-left: 200px;
     padding-right: 200px;
   }
-  .where{
-    padding: 45px;
-    padding-left: 185px;
-    padding-right: 185px;
-  }
 
-  .gallery{
+  .gallery {
     padding-left: 200px;
     padding-right: 200px;
   }
 
-  .hamburger-icon{
-    display: none;
-  }
-
-  .navbar{
-    max-height: 100px;
-  }
 
 
-  .Title-text{
+
+  .Title-text {
     top: 5%;
-    font-size:12.5vw;
-  }
-  .poster-container{
-    background-image:url(images/Background_Blured.jpg);
+    font-size: 12.5vw;
   }
 
-  .render{
+  .poster-container {
+    background-image: url(images/Background_Blured.jpg);
+  }
+
+  .render {
     scale: 100%;
-  transform: translateX(0vw);
+    transform: translateX(0vw);
   }
 }
 
 
 
 .myCheckbox {
-  
+
   width: 100%;
   height: 100%;
 }
@@ -420,9 +499,10 @@ html, body {
   width: 100vw;
   height: 100vh;
   z-index: 1000;
-  background-size:contain;
+  background-size: contain;
   background-color: rgba(0, 11, 17, 0.5);
 }
+
 ul {
   display: inline-grid;
   grid-auto-flow: row;
@@ -452,7 +532,7 @@ li:last-child {
   grid-row: 1 / 2;
 }
 
-li:hover ~ li p {
+li:hover~li p {
   animation: wave-animation 0.3s infinite;
 }
 
@@ -469,13 +549,16 @@ li:hover ~ li p {
 }
 
 @keyframes wave-animation {
+
   0%,
   100% {
     transform: rotate(0deg);
   }
+
   25% {
     transform: rotate(20deg);
   }
+
   75% {
     transform: rotate(-15deg);
   }
